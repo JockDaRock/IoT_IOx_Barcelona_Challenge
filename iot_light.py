@@ -21,6 +21,13 @@ def light2on():
     return "light 2 is on light 1 is off"
 
 
+@app.route('/lightsoff')
+def light2on():
+    GPIO.output(18, GPIO.LOW)
+    GPIO.output(15, GPIO.LOW)
+    return "light 1 and 2 are off!!!"
+
+
 if __name__ == '__main__':
     try:
         app.run(host='0.0.0.0', port=80, debug=True)
