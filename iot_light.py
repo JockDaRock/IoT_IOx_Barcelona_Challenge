@@ -22,7 +22,7 @@ def light2on():
 
 
 @app.route('/lightsoff')
-def light2on():
+def lightoff():
     GPIO.output(18, GPIO.LOW)
     GPIO.output(15, GPIO.LOW)
     return "light 1 and 2 are off!!!"
